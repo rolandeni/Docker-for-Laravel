@@ -1,20 +1,19 @@
-#### Docker-for-Laravel
-### container files to deploy laravel
+
 # Laravel-Setup-Using-Docker
 ## Prerequisites
 #### Before you start, you will need;
-#### 1. A running ubuntu operating system download or you can use a cloud provider 
-#### 2. You must have docker installed, etc
+#### 1. A running ubuntu operating system or you can use a cloud provider 
+#### 2. You should have docker installed and running.
+#### 3. clone this repository
+#### 4. cd into this repo after cloning
+#### 5. run this command *docker-compose build app* ![1](images/1.png)
+#### 6. then run this command *docker-compose up -d* 
+#### 7. run *docker-compose ps* to be sure the three containers are runing
+#### 8. run *docker-compose exec app composer install* to install necessary dependencies
+#### 9. run *docker-compose exec app php artisan key:generate
+#### 10. now open a browser and visit your local host ip or the instance public address
 
-## Step1 - Download laravel and it's dependencies
-#### The first step is to get the laravel clone to our home directory or if you can create a directory and clone laravel app to the directory. The Github repo comes with a composer file, an application-level dependey manager for PHP. Since we are trying to used all the dependencies as a docker container. let fire up our terminal...
-#### **cd to home directory or you can cd to your project directory.**
-#### **git clone https://github.com/laravel/laravel.git laravel-app**. After it is done cloning, move into your laravel-app directory and use Docker’s composer image to mount the directories that you will need for your Laravel project and avoid the overhead of installing Composer globally with the below command:
-       docker run --rm -v $(pwd):/app composer install
-#### The -v and -rm create an an ephemeral container that will be bind-mounted to your current directory before being removed. And copy the content of you laravel-app directory to the container and also make sure that the vendor folder Composer creates inside the container is copied to your current directory. 
-#### The next step is to set a permissions on the laravel-app project directory so that it is owned by your non-root user
-       sudo chown -R $USER:$USER ~/laravel-app
-#### This will be very important when you are writing a dockerfile for your application image, as it will allow your application container to run as non-root user.
+
 
 ## Step - 2 Let create dockerfile for our laravel-app application
 #### Dockerfile includes instructions that Docker can use to build custom Docker images. It can also install the software required and configure the necessary settings for your application. They specify the environment inside a container that will host your application code. You may push the images you create to docker hub for sharing or place them on other private registries.
