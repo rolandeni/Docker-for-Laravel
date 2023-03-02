@@ -6,11 +6,11 @@
 #### 2. You should have docker installed and running.
 #### 3. clone this repository
 #### 4. cd into this repo after cloning
-#### 5. run this command *docker-compose build app* ![1](images/1.png)
-#### 6. then run this command *docker-compose up -d* 
-#### 7. run *docker-compose ps* to be sure the three containers are runing
-#### 8. run *docker-compose exec app composer install* to install necessary dependencies
-#### 9. run *docker-compose exec app php artisan key:generate
+#### 5. run this command **docker-compose build app** ![1](images/1.png)
+#### 6. then run this command **docker-compose up -d** 
+#### 7. run **docker-compose ps** to be sure the three containers are runing
+#### 8. run **docker-compose exec app composer install** to install necessary dependencies
+#### 9. run **docker-compose exec app php artisan key:generate**
 #### 10. now open a browser and visit your local host ip or the instance public address
 
 
