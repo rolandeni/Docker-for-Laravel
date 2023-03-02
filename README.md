@@ -15,7 +15,7 @@
 
 
 
-## Step - 2 Let create dockerfile for our laravel-app application
+## To break down the process
 #### Dockerfile includes instructions that Docker can use to build custom Docker images. It can also install the software required and configure the necessary settings for your application. They specify the environment inside a container that will host your application code. You may push the images you create to docker hub for sharing or place them on other private registries.
 
 #### We will create a Dockerfile that will specify the instructions to build the Laravel application image. Use nano to create the Dockerfile in ~/laravel-web directory:
